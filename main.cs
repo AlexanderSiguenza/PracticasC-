@@ -11,7 +11,7 @@ class MainClass
     //Inicia el programa principal
     Console.ForegroundColor = ConsoleColor.Black;
     Console.BackgroundColor = ConsoleColor.White;
-    Console.Clear();
+    Console.Clear(); 
     Console.Title = "Ejemplo3 utilizando la sintaxis de funciones";
     Double cantidad, resul;
 
