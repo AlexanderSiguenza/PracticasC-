@@ -1,2 +1,2 @@
 # Procedimientos y Funciones
-Esta rama es para practica de funciones y procedimientos utilizando switch
+# Programa que permite digitar un número entero positivo y me diga si es par o impar.
