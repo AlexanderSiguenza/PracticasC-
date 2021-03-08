@@ -1,2 +1,2 @@
 # Procedimientos y Funciones
-Esta rama es para practica de funciones y procedimientos utilizando switch
+#  Programa que permite hacer conversión de monedas digitando una cantidad en dólares, utilizando funciones.
