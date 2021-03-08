@@ -1,2 +1,2 @@
 # PracticasC#
-Este Repositorio es para compartir ejemplos en C# 
+EEsta rama es para practica de funciones y procedimientos utilizando switch
