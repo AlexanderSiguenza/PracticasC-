@@ -1,35 +1,68 @@
 using System;
 
- // Programa que permite digitar un número entero positivo y me diga si es par o impar.
- 
-class MainClass {
+/* Programa que permite hacer conversión de monedas 
+   digitando una cantidad en dólares, utilizando 
+   funciones.*/
 
-  public static void Main (string[] args) {  
-    //Inicio del programa principal
+class MainClass 
+{
+  public static void Main (string[] args) 
+  {
+    //Inicia el programa principal
     Console.ForegroundColor = ConsoleColor.Black;
     Console.BackgroundColor = ConsoleColor.White;
-    Console.Clear();
+    Console.Clear(); 
+    Console.Title = "Ejemplo3 utilizando la sintaxis de funciones";
+    Double cantidad, resul;
 
-    Console.Title = "Uso de un procedimiento";
-    int num;
-    Console.WriteLine("Digitar un numero entero positivo:");
-    num = int.Parse(Console.ReadLine());
-    Par(num);
+    Console.WriteLine("Digitar la cantidad en dólares:");
+    cantidad = Double.Parse(Console.ReadLine()); 
+
+    resul = conversiones(cantidad, 'e'); // euros
+    Console.WriteLine("Los {0} dolares son {1} euros ", cantidad, resul);
+
+    resul = conversiones(cantidad, 'l'); // libras
+    Console.WriteLine("Los {0} dolares son {1} libras ", cantidad, resul); 
+
+    resul = conversiones(cantidad, 'b'); // Bitcoin
+    Console.WriteLine("Los {0} dolares son {1} Bitcoin ", cantidad, resul); 
+
     Console.WriteLine("\n");
     Console.WriteLine("-->Fin del programa");
     Console.ReadKey();
-  }
+  }  
 
-  static void Par(int a)
-  {
-    int x;
-    x = (a % 2);
-    if (x == 0){
-      Console.WriteLine("\nEs par");
-    } else{
-      Console.WriteLine("\nEs impar");
+  static Double conversiones(Double pcantidad , Char pmoneda)
+  { 
+    Double resul=0;
+    switch (pmoneda) 
+    {
+      case 'e': // euros
+        resul = pcantidad * 0.84;
+        break;
+      case 'l': // libras
+        resul = pcantidad * 0.72;
+        break;
+      case 'b': // Bitcoin
+        resul = pcantidad * 0.000020;
+        break;
+      default:
+        Console.WriteLine("Por favor ingresar valores validos /  (l)->libras o (e)->euros (b)->Bitcoin");
+        break;
     }
+    return resul;
   }
-
- 
+  
 }
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
